@@ -1,6 +1,5 @@
 package com.zdp.threadmodel.bio;
 
-import com.zdp.threadmodel.Util;
 
 import java.io.*;
 import java.net.Socket;

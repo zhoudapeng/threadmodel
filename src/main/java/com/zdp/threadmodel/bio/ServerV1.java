@@ -1,11 +1,9 @@
 package com.zdp.threadmodel.bio;
 
-import com.zdp.threadmodel.Util;
-import org.apache.commons.lang.time.FastDateFormat;
-
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -27,7 +25,7 @@ public class ServerV1 {
                 String request = reader.readLine();
                 System.out.println("receive request:" + request);
                 writer = new BufferedWriter(new OutputStreamWriter(outputStream,"utf-8"));
-                writer.write("the time is " + FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss").format(new Date()));
+                writer.write("the time is " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
                 writer.newLine();
                 writer.flush();
             }
